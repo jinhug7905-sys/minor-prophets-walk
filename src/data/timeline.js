@@ -15,6 +15,6 @@ export const stations=[
  {id:'520',date:'B.C.520',title:'학개와 스가랴',books:['haggai','zechariah'],text:'포로 귀환 이후 바사(페르시아) 시대. 공사 중단 약 16년 후 함께 성전 재건을 독려합니다.',passage:'스 5:1~2'},
  {id:'516',date:'B.C.516',title:'제2성전 완공',books:['haggai','zechariah','malachi'],text:'건물의 재건 이후에도 공동체의 예배와 마음의 회복은 계속되는 과제입니다.',passage:'스 6:14~15'},
  {id:'458',date:'B.C.458',title:'에스라',books:['malachi'],text:'귀환 이후 공동체의 율법과 예배 회복을 살펴보는 역사 앵커입니다.',passage:'스 7'},
- {id:'malachi',date:'약 B.C.450~430',title:'말라기 · 제2성전 공동체',books:['malachi'],text:'사역 범위 안에 B.C.444 느헤미야가 놓입니다. 단일 시점으로 배열하지 않으며 느 13장과 정확히 같은 순간이라고 단정하지 않습니다.'},
- {id:'444',date:'B.C.444',title:'느헤미야',books:['malachi'],text:'말라기의 약 B.C.450~430 범위와 시간적으로 겹칩니다. 공동체의 유사한 문제를 비교하되 동일한 순간이라고 단정하지 않습니다.',passage:'느 13'}
+{id:'444',date:'B.C.444',title:'느헤미야',books:['malachi'],text:'말라기의 약 B.C.450~430 범위와 시간적으로 겹칩니다. 공동체의 유사한 문제를 비교하되 동일한 순간이라고 단정하지 않습니다.',passage:'느 13'},
+{id:'malachi',date:'약 B.C.450~430',title:'말라기 · 제2성전 공동체',books:['malachi'],text:'사역 범위 안에 B.C.444 느헤미야가 놓입니다. 단일 시점으로 배열하지 않으며 느 13장과 정확히 같은 순간이라고 단정하지 않습니다.'},
 ];

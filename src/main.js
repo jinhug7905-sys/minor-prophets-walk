@@ -49,7 +49,13 @@ function comparison(aId,bId){const a=getBook(aId),b=getBook(bId);if(!a||!b)retur
 function journeyPage(){return `<section class="page-heading"><div class="eyebrow">MY JOURNEY</div><h1>나의 여정</h1><p>작은 발걸음이 모여 하나의 길이 됩니다.</p><div class="stat">${books.reduce((n,b)=>n+completed(b),0)}<span> / 72단계 완료</span></div><p class="notice">기록과 메모는 현재 브라우저에 저장됩니다. 계정 동기화는 제공하지 않습니다.</p></section><div class="book-grid">${books.map(card).join('')}</div>`;}
 function handleActions(e){
  const el=e.target.closest('button,[data-place]');if(!el)return;
- if(el.hasAttribute('data-reading')){const t=JSON.parse(el.dataset.reading);openDialog(`📖 ${t.fullBook?t.reference+' 전체 읽기':t.reference}`,`<p>${escape(t.reason)}</p><dl class="target-metadata"><dt>제공처</dt><dd>${escape(t.provider)}</dd><dt>번역</dt><dd>${escape(t.translation)}</dd><dt>본문 범위</dt><dd>${escape(t.reference)}</dd><dt>연결 상태</dt><dd>${escape(t.status)}</dd></dl><p class="notice">확인되지 않은 성경 URL을 생성하지 않았습니다. 공식 본문 링크가 확인될 때까지 성경책이나 대한성서공회에서 위 본문 범위를 직접 찾아 읽어 주세요.</p><button class="secondary" disabled>대한성서공회 개역개정에서 본문 읽기 →</button>`);return;}
+ if(el.hasAttribute('data-reading')){const t=JSON.parse(el.dataset.reading);openDialog(`📖 ${t.fullBook?t.reference+' 전체 읽기':t.reference}`,`<p>${escape(t.reason)}</p><dl class="target-metadata"><dt>제공처</dt><dd>${escape(t.provider)}</dd><dt>번역</dt><dd>${escape(t.translation)}</dd><dt>본문 범위</dt><dd>${escape(t.reference)}</dd><dt>연결 상태</dt><dd>${escape(t.status)}</dd></dl>${t.url
+  ? `<p class="notice">대한성서공회 개역개정 공식 본문으로 연결됩니다. 현재 카드의 본문 범위는 위에 표시된 범위를 따라 읽어 주세요.</p>`
+  : `<p class="notice">확인되지 않은 성경 URL을 생성하지 않았습니다. 공식 본문 링크가 확인될 때까지 성경책이나 대한성서공회에서 위 본문 범위를 직접 찾아 읽어 주세요.</p>`
+}${t.url
+  ? `<a class="secondary" href="${escape(t.url)}" rel="noopener noreferrer">대한성서공회 개역개정에서 본문 읽기 →</a>`
+  : `<button class="secondary" disabled>대한성서공회 개역개정에서 본문 읽기 →</button>`
+}`);return;}
  if(el.hasAttribute('data-station-open')){const s=stations.find(s=>s.id===el.dataset.stationOpen);openDialog(`${s.date} · ${s.title}`,`<p>${escape(s.text)}</p><div class="related-links">${s.books.map(id=>bookLink(getBook(id))).join('')}</div>${s.passage?reading(s.passage,'역사 정거장을 관련 성경 본문에서 확인하세요.'):''}`);return;}
  if(!currentBook)return;
  if(el.hasAttribute('data-deep')){const d=deepViews[currentBook.id].find(d=>d.id===el.dataset.deep);if(d)openDialog(d.title,`<span class="tag">${escape(d.type)}</span><p>${prose(d.text)}</p>${d.passages.map(ref=>reading(ref,'설명과 함께 본문의 앞뒤 문맥을 확인하세요.')).join('')}`);return;}
