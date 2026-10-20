@@ -3,3 +3,49 @@
 @media(max-width:640px){header{padding:18px 20px;align-items:flex-start;flex-wrap:wrap;gap:12px}.brand{font-size:15px}.brand small{font-size:8px}header nav{gap:22px;font-size:13px}main{padding:8px 18px 40px}.hero{padding:36px 25px}.hero p{font-size:16px}.orbit{right:-220px}.hero-actions{flex-direction:column;align-items:flex-start;gap:8px}.hero-actions .button{font-size:14px;padding:12px 18px}.hero-foot{font-size:11px}.section-head{align-items:flex-start;flex-direction:column;gap:0}.section-head label{width:100%;margin-bottom:12px}.section-head input{width:100%}h2{font-size:22px}.book-grid{grid-template-columns:1fr}.book-card{padding:23px}.book-card h3{font-size:27px}.library{margin-top:35px}.sticky-era{flex-direction:column;gap:2px;padding:10px 0;font-size:12px}.sticky-era .book-date{font-size:16px}.book-toolbar{font-size:12px;gap:3px;flex-direction:column}.lesson{padding:22px 18px}.lesson-title{padding:24px 0 12px}.lesson-title h1{font-size:25px;letter-spacing:-.8px}.lesson-actions{align-items:stretch;flex-direction:column}.book-landing{margin:25px auto}.position-card{padding:22px}.position-card p{font-size:16px}.step-nav{padding:6px 4px max(7px,env(safe-area-inset-bottom));gap:2px}.step-nav a{padding:8px 2px;min-height:55px}.step-nav a>span{font-size:16px}.step-nav small{font-size:9px;word-break:keep-all}.deep-grid,.comparison-grid,.place-list{grid-template-columns:1fr}.flow-card{padding:18px 14px;gap:12px}.flow-card h3{font-size:19px}.flow-card p{font-size:15px}.flow-number{font-size:17px}.key-card{padding:20px 15px}.reading-card{padding:15px 12px;gap:9px}.reading-icon{font-size:21px}.reading-open{font-size:12px}.connection-card{padding:20px 15px}.connection-card h3{font-size:18px}.summary-sheet{padding:20px 15px}.summary-sheet dl{grid-template-columns:65px minmax(0,1fr);gap:12px}.summary-sheet dd{font-size:14px}.canonical-nav{flex-direction:column;align-items:flex-start;gap:12px}.detail-dialog{width:100%;max-height:88dvh;margin:auto 0 0;border-radius:16px 16px 0 0}.dialog-head{padding:20px 20px 15px}.dialog-head h2{font-size:19px}.dialog-body{padding:22px 20px max(30px,env(safe-area-inset-bottom))}.global-timeline{padding-left:22px}.station{padding:23px 18px}.station:before{left:-32px}.station h2{font-size:21px}.map-legend{grid-template-columns:1fr}.two-columns,.context-pair{gap:12px}.two-columns p{font-size:14px}.book-date{white-space:nowrap}.target-metadata{grid-template-columns:70px minmax(0,1fr);gap:12px}.card-links{gap:3px}.page-heading h1{font-size:29px}footer{padding-bottom:110px}}
 @media(prefers-reduced-motion:reduce){.book-card{transition:none}}
 .map-water{fill:#d7e8e9}.coastline{stroke:#a7c2b8;stroke-width:1.5;fill:none}.map-river{stroke:#aacdd0;stroke-width:2;fill:none}.location-halo{fill:#dbe6d3;opacity:.5}
+
+/* Minor Prophets home hero */
+.hero{
+  background:
+    linear-gradient(90deg,rgba(10,35,32,.72) 0%,rgba(10,35,32,.48) 38%,rgba(10,35,32,.12) 68%,rgba(10,35,32,.18) 100%),
+    url('/images/minor-prophets-hero.png') left center/cover no-repeat;
+  min-height:520px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.hero-author{
+  position:relative;
+  z-index:1;
+  color:#f3dfb0;
+  font-weight:700;
+  font-size:16px;
+  margin-top:12px;
+}
+.hero .orbit{
+  display:none;
+}
+@media (min-width: 700px){
+  .hero > .eyebrow,
+  .hero > h1,
+  .hero > p,
+  .hero > .hero-author,
+  .hero > .hero-actions,
+  .hero > .hero-foot{
+    margin-left:180px;
+  }
+}
+@media (max-width: 699px){
+  .hero{
+    min-height:470px;
+    padding:44px 26px;
+  }
+  .hero h1{
+    font-size:34px;
+    line-height:1.35;
+  }
+  .hero p{
+    font-size:15px;
+    max-width:390px;
+  }
+}
