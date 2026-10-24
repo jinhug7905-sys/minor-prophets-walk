@@ -49,3 +49,47 @@
     max-width:390px;
   }
 }
+/* 학습용 지도·참고 이미지 공통 스타일 */
+.study-visual {
+  margin: 28px 0;
+  padding: 18px;
+  background: #fffdf7;
+  border: 1px solid #ded7c8;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(55, 45, 30, 0.08);
+}
+
+.study-visual h2 {
+  margin: 0 0 8px;
+}
+
+.study-visual p {
+  margin: 0 0 16px;
+  color: #665f54;
+}
+
+.study-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.study-visual figcaption {
+  margin-top: 12px;
+  color: #6b6459;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 699px) {
+  .study-visual {
+    margin: 20px 0;
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .study-visual img {
+    border-radius: 9px;
+  }
+}
