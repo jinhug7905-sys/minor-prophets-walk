@@ -172,7 +172,7 @@ if(b.id==="zechariah" && index===2){
            loading="lazy">
     </section>`;
 }  const images={    hosea:{src:"/minor-prophets-walk/images/hosea-reference.png",title:"📖 호세아 한눈에 보기"},
-                            micah:{src:"/minor-prophets-walk/images/micah-reference.png",title:"🧭 미가 시대의 주요 지명 지도"}
+                            micah:{src:"/minor-prophets-walk/images/micah-history.png",title:"👣 미가 시대의 역사적 배경"}
   };
  const item=index===0 && b.id!=="obadiah" ? images[b.id] : null;
   if(!item)return "";
